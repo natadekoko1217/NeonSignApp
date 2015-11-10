@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zCh-gl-f3P">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--main-->
+        <scene sceneID="aAP-ak-o4v">
+            <objects>
+                <viewController storyboardIdentifier="main" title="main" id="zCh-gl-f3P" customClass="ViewController" customModule="ViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KZT-y9-gOo"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZXU-G9-kxR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XNa-Tq-3QC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sws-kN-o6s">
+                                <rect key="frame" x="277" y="102" width="46" height="46"/>
+                                <animations/>
+                                <state key="normal" backgroundImage="power1.png"/>
+                                <connections>
+                                    <action selector="onPower" destination="zCh-gl-f3P" eventType="touchUpInside" id="9r1-ef-mYf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qBH-W2-MRk" customClass="SpringButton" customModule="ViewTest" customModuleProvider="target">
+                                <rect key="frame" x="143" y="88" width="315" height="74"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" backgroundImage="board.png">
+                                    <string key="title">iPadに隠されたギミックを動作させて 
+いろんな点灯パターンを探してみよう</string>
+                                    <color key="titleColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="shakeKanban" destination="zCh-gl-f3P" eventType="touchUpInside" id="jTr-z6-06N"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIp-EE-Z4K">
+                                <rect key="frame" x="96" y="329" width="432" height="454"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" backgroundImage="button1.png"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="qBH-W2-MRk" firstAttribute="centerX" secondItem="XNa-Tq-3QC" secondAttribute="centerX" id="IPr-jv-vHc"/>
+                            <constraint firstItem="yIp-EE-Z4K" firstAttribute="centerX" secondItem="XNa-Tq-3QC" secondAttribute="centerX" constant="10" id="jMd-B8-gYQ"/>
+                            <constraint firstItem="sws-kN-o6s" firstAttribute="centerX" secondItem="XNa-Tq-3QC" secondAttribute="centerX" id="ppc-lp-AUS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animationButton" destination="qBH-W2-MRk" id="jKV-4m-o2A"/>
+                        <outlet property="mainButton" destination="yIp-EE-Z4K" id="m2o-YR-2lW"/>
+                        <outlet property="powerButton" destination="sws-kN-o6s" id="EbD-RE-ORK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OG3-8G-pMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="414"/>
+        </scene>
+        <!--View Controller2-->
+        <scene sceneID="whx-Fu-EM2">
+            <objects>
+                <viewController storyboardIdentifier="HideView" id="GQV-Ey-Xnm" customClass="ViewController2" customModule="ViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PxC-QP-eYT"/>
+                        <viewControllerLayoutGuide type="bottom" id="wDx-s0-11i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vzi-Hk-PBk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2Y3-6O-UTP">
+                                <rect key="frame" x="250" y="241" width="101" height="117"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xNQ-XY-SZR">
+                                        <rect key="frame" x="0.0" y="0.0" width="101" height="117"/>
+                                        <animations/>
+                                        <state key="normal" backgroundImage="power1.png"/>
+                                        <connections>
+                                            <action selector="onPower:" destination="GQV-Ey-Xnm" eventType="touchUpInside" id="s3r-ij-adQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                            </stackView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2Y3-6O-UTP" firstAttribute="centerX" secondItem="vzi-Hk-PBk" secondAttribute="centerX" id="GaL-IL-ekd"/>
+                            <constraint firstItem="2Y3-6O-UTP" firstAttribute="centerY" secondItem="vzi-Hk-PBk" secondAttribute="centerY" id="MRx-2k-CX0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="powerButton" destination="xNQ-XY-SZR" id="hMa-sw-STv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NsZ-xF-NiX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="408"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="board.png" width="401" height="184"/>
+        <image name="button1.png" width="307" height="320"/>
+        <image name="power1.png" width="101" height="117"/>
+    </resources>
+</document>
